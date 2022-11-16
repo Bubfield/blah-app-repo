@@ -33,7 +33,7 @@ export const carousel = () => {
         delete leftSlide.dataset.left;
         delete rightSlide.dataset.right;
       } else {
-        rightSlide.style.zIndex = "-1";
+        rightSlide.style.zIndex = "0";
         leftSlide.style.zIndex = "1";
         leftMiddleSlide.style.zIndex = "3";
         middleSlide.style.zIndex = "2";
@@ -41,6 +41,9 @@ export const carousel = () => {
         setTimeout(() => {
           rightSlide.style.zIndex = "1";
           leftSlide.style.zIndex = "2";
+          leftMiddleSlide.style.zIndex = "7";
+          middleSlide.style.zIndex = "5";
+          rightMiddleSlide.style.zIndex = "4";
         }, 1000);
         middleSlide.dataset.rightmiddle = true;
         rightMiddleSlide.dataset.right = true;
